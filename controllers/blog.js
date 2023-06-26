@@ -3,7 +3,7 @@ const db = require("../models");
 const { Blog } = db;
 
 module.exports = {
-  async create(req, res) {
+  async createBlog(req, res) {
     if (!req.body.title) {
       return res.status(400).send({
         error: "Title is required",
